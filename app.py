@@ -20,4 +20,4 @@ if __name__ == "__main__":
     print("Flask app running at http://127.0.0.1:5000/")
 
     # Start LiveKit agents (main.py) in a separate process.
-    subprocess.Popen(['python', 'main.py', 'start'])
+    subprocess.Popen(['python3', 'main.py', 'start'])

@@ -39,7 +39,7 @@ async def start_livekit(ctx: JobContext):
     print("Voice assistant started.")
 
     # Greet the user
-    await assistant.say("Hello! How can I assist you today?", allow_interruptions=True)
+    await assistant.say("Hello! How can I assist you today?", allow_interruptions=False)
 
     # Define a callback for processing user speech
     @assistant.on_user_speech
@@ -53,7 +53,7 @@ async def start_livekit(ctx: JobContext):
                 print(f"Assistant response: {response}")  # Log assistant's response
 
                 # Speak the response back to the user
-                await assistant.say(response, allow_interruptions=True)
+                await assistant.say(response, allow_interruptions=False)
         except Exception as e:
             print(f"Error while processing user input: {e}")
 
